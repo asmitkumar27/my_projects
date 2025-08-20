@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Live Character Counter for Textarea</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+    }
+    .box {
+      border: 1px solid black;
+      padding: 15px;
+      margin-bottom: 20px;
+    }
+    h2 {
+      margin-top: 0;
+    }
+    textarea {
+      width: 100%;
+      height: 100px;
+      padding: 8px;
+      font-size: 16px;
+      margin-top: 10px;
+      border: 1px solid #999;
+      border-radius: 4px;
+      resize: none;
+    }
+    .counter {
+      margin-top: 8px;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  
+  <div class="box">
+    <h2>Live Character Counter</h2>
+    <textarea id="textInput1" placeholder="Start typing..."></textarea>
+    <div class="counter">Characters: <span id="charCount1">0</span></div>
+  </div>
+
+  <div class="box">
+    <h2>Live Character Counter</h2>
+    <textarea id="textInput2">Hello from ByteXL</textarea>
+    <div class="counter">Characters: <span id="charCount2">17</span></div>
+  </div>
+
+  <script>
+    function setupCounter(textareaId, counterId) {
+      const textarea = document.getElementById(textareaId);
+      const counter = document.getElementById(counterId);
+
+      textarea.addEventListener("input", () => {
+        counter.textContent = textarea.value.length;
+      });
+    }
+
+    // Setup both counters
+    setupCounter("textInput1", "charCount1");
+    setupCounter("textInput2", "charCount2");
+  </script>
+
+</body>
+</html>

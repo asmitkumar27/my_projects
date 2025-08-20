@@ -1,0 +1,47 @@
+The counter should:
+
+Start at 0 when the textarea is empty.
+
+Update instantly as the user types, pastes, or deletes text.
+
+Work for multiple textareas independently (if more than one is added).
+
+Pre-filled textareas should automatically show the correct initial character count on page load.
+
+Expected Output
+
+When the page loads:
+
+An empty textarea shows Characters: 0.
+
+A prefilled textarea (e.g., "Hello from ByteXL") shows Characters: 17.
+
+As the user types:
+
+Each keystroke immediately updates the counter.
+
+Deleting characters reduces the count accordingly.
+
+Multiple textareas (if present) maintain independent counters.
+
+Layout remains clean and readable — the counter always stays below its textarea.
+
+Pass Criteria
+
+Counters update in real-time.
+
+Prefilled text shows the correct count at load time.
+
+Multiple counters work independently without interfering.
+
+Layout and design stay consistent across different screen sizes.
+
+Fail Criteria
+
+Counter does not update when typing/deleting.
+
+Incorrect count is displayed.
+
+Counters overlap textareas or break the layout.
+
+One textarea’s counter updates another’s.
