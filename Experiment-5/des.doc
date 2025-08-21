@@ -1,0 +1,41 @@
+This project demonstrates how to create a Dynamic Product Filter with Dropdown using JavaScript DOM Manipulation.
+
+The webpage displays a list of products (like T-Shirt, Jeans, Smartphone, Novel, etc.), each belonging to a category such as Clothing, Electronics, or Books.
+
+A dropdown menu is placed above the product list with options:
+
+All (shows every product)
+
+Clothing (shows only clothing items)
+
+Electronics (shows only electronic items)
+
+Books (shows only books)
+
+Each product is assigned a custom data-category attribute to indicate which category it belongs to.
+
+Using JavaScript event handling, the code listens for changes in the dropdown selection.
+
+When the user selects a category, JavaScript filters the product list dynamically by showing only the matching products and hiding the rest.
+
+If "All" is selected, all items are displayed again.
+
+🎯 Key Concepts Covered
+
+DOM Manipulation → Using querySelectorAll to select elements and update their display.
+
+Event Handling → Listening for the change event on the dropdown menu.
+
+Attributes → Using data-category to classify products by type.
+
+Real-time Filtering → The page updates instantly without reloading.
+
+✅ Expected Output
+
+When All is selected → All products appear.
+
+When Clothing is selected → Only T-Shirt and Jeans appear.
+
+When Electronics is selected → Only Headphones and Smartphone appear.
+
+When Books is selected → Only Novel and Cookbook appear.
