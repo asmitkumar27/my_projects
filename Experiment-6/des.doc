@@ -1,0 +1,25 @@
+In this experiment, we design and implement a web-based drawing tool using SVG (Scalable Vector Graphics) and JavaScript event handling. The tool provides an interactive canvas where users can draw shapes or freehand lines inside an SVG area by simply using their mouse.
+
+The drawing process works through three main mouse events:
+
+mousedown → Captures the starting point of the drawing.
+
+mousemove → Dynamically updates the shape or line being drawn as the mouse moves.
+
+mouseup → Ends the drawing and finalizes the shape.
+
+A new shape can be drawn each time the user clicks and drags inside the SVG box, allowing multiple drawings without reloading the page. The entire interaction is handled via JavaScript DOM manipulation, where SVG elements (such as path, line, or rect) are created and updated in real time.
+
+The SVG canvas is styled with a border and background color to provide a clear drawing area, mimicking a digital sketchpad.
+
+This experiment demonstrates:
+
+How to use SVG as an interactive drawing surface in web development.
+
+The use of JavaScript event listeners (mousedown, mousemove, mouseup, mouseleave) for real-time interactivity.
+
+Dynamic creation and manipulation of SVG elements using the DOM.
+
+Handling continuous user input to simulate handwriting or shape drawing.
+
+The final output is a simple but functional drawing tool where users can sketch freehand or create shapes, similar to a lightweight paint application.
