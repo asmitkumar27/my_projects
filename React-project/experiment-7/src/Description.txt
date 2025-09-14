@@ -1,0 +1,21 @@
+Project Description – Library Management UI
+
+In this experiment, I built a small but powerful Library Management System using React. The goal of this project was to create an interactive interface where a user can view a list of books and manage them easily. Instead of being just a static list, the application is dynamic — meaning users can search, add, and remove books instantly without reloading the page.
+
+When the app first loads, it already shows a few classic books like 1984, The Great Gatsby, and To Kill a Mockingbird. On top of the list, there is a search bar. As soon as you type in the search box, the list automatically filters itself and only shows the books that match the title or the author’s name. For example, typing “great” will instantly bring up The Great Gatsby. This makes searching fast and interactive.
+
+Another feature is the ability to add new books. The interface has two input boxes: one for the title and one for the author. After filling them in, clicking the Add Book button will immediately display the new book in the list below. This shows how React updates the UI based on state changes.
+
+Finally, there is a Remove button next to every book. If a user no longer wants a book in the library, they can simply click “Remove,” and the book disappears instantly from the list.
+
+** Key Highlights and Learnings
+
+I learned how to use React’s useState hook to keep track of books and update them dynamically.
+
+I understood how to handle forms and user input in React to capture new book data.
+
+I practiced filtering arrays in JavaScript to implement the search functionality.
+
+I saw how React makes the UI feel smooth and real-time — everything updates instantly when the state changes.
+
+I also improved my skills in CSS styling by making the layout clean, with clear sections for search, add, and book display.

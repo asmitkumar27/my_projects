@@ -1,0 +1,37 @@
+** Description
+
+This JavaScript program demonstrates inheritance and method overriding using ES6 classes.
+
+** Base Class: Person
+
+Has two properties: name and age.
+
+Defines a method displayInfo() that returns a string with basic details (Name and Age).
+
+** Subclass: Student
+
+Extends the Person class.
+
+Adds a new property: course.
+
+Overrides the displayInfo() method to include both the base class details (via super.displayInfo()) and the student’s course.
+
+** Subclass: Teacher
+
+Extends the Person class.
+
+Adds a new property: subject.
+
+Overrides the displayInfo() method to include the base class details and the teacher’s subject.
+
+** Demonstration
+
+A Student object (student1) and a Teacher object (teacher1) are created.
+
+The overridden displayInfo() method is called on both instances.
+
+** Output is displayed in the console:
+
+Name: Alice, Age: 20, Course: Computer Science
+
+Name: Mr. John, Age: 45, Subject: Mathematics

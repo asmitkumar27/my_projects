@@ -1,0 +1,39 @@
+.library-container {
+  border: 1px solid black;
+  padding: 20px;
+  margin: 20px;
+  max-width: 600px;
+}
+
+.library-container h2 {
+  font-weight: bold;
+}
+
+input {
+  padding: 5px;
+  margin: 5px;
+}
+
+.add-book {
+  margin-top: 10px;
+}
+
+button {
+  padding: 5px 10px;
+  margin-left: 5px;
+  cursor: pointer;
+}
+
+.book-list {
+  margin-top: 20px;
+}
+
+.book-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 1px solid #ddd;
+  padding: 10px;
+  margin: 5px 0;
+  border-radius: 4px;
+}
