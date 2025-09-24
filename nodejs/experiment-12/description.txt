@@ -1,0 +1,33 @@
+Project Description
+
+This project focuses on building a concurrent ticket booking API using Node.js and Express.js, simulating real-world scenarios where multiple users may attempt to book the same seat simultaneously. The key challenge is handling concurrency and race conditions to prevent double-bookings.
+
+The solution implements a seat-locking mechanism. When a user selects a seat, the system places a temporary lock (e.g., one minute), making it unavailable to others. During this lock period, only the user who initiated the lock can confirm the booking. If the booking is not confirmed within the allotted time, the lock automatically expires and the seat becomes available again.
+
+The API manages the full lifecycle of seats—available, locked, and booked—through an in-memory data structure for simplicity. It provides clear endpoints to:
+
+View all seats and their current state.
+
+Lock a seat temporarily.
+
+Confirm a booking after a lock.
+
+
+The system also includes robust error handling, returning meaningful responses for invalid actions (e.g., attempting to lock a booked seat or confirm without a valid lock).
+
+
+---
+
+Key Learnings
+
+Concurrency & Race Condition Handling: Gained hands-on experience with race conditions and implemented a locking mechanism to ensure safe, conflict-free seat bookings. 🏎
+
+State Management: Learned to manage complex, time-sensitive states (available, locked, booked) and track lock ownership and expiration.
+
+Workflow-Oriented API Design: Designed a multi-step workflow (view → lock → confirm) similar to real-world systems like reservations and e-commerce checkouts.
+
+Asynchronous Logic with Timers: Used setTimeout to implement automatic lock expiration, applying asynchronous programming for time-based business logic. ⏳
+
+Robust Business Logic: Moved beyond CRUD to design domain-specific rules governing bookings, strengthening skills in modeling real-world requirements.
+
+Defensive Programming: Practiced anticipating edge cases and invalid operations, resulting in a more resilient and error-tolerant system.
