@@ -1,0 +1,20 @@
+
+Experiment 15: Student Management System using Node.js, Express, and MongoDB
+In this experiment, I created a basic Student Management System API using Node.js, Express, and MongoDB with Mongoose. 
+The goal was to implement and test CRUD operations (Create, Read, Update, Delete) through RESTful API endpoints.
+
+I started by designing a Mongoose schema for the student model, including fields for name, age, course, and city.
+ Then I created API routes to handle each operation:
+POST to add a new student to the database.
+GET to retrieve all students or a student by ID.
+PUT to update an existing student's data by ID.
+DELETE to remove a student by ID.
+
+I tested these API endpoints using Postman by sending requests and checking the responses.
+I also verified the changes in real-time using MongoDB Compass, which showed me the student data stored in the database.
+
+During the experiment, I learned how to handle JSON request bodies, validate ObjectIDs, and properly structure API routes. 
+I also learned that restarting the server after schema changes is important so new fields like city can be saved and shown.
+
+Finally, I completed the experiment by successfully adding, reading, updating, and deleting student records, and captured screenshots for each stage as proof.
+This helped me understand backend API development and working with MongoDB databases.
