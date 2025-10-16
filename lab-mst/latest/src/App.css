@@ -1,0 +1,46 @@
+.container {
+  max-width: 450px;
+  margin: 40px auto;
+  padding: 20px;
+  background: #0c0c3d;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px #0001;
+}
+.search-bar {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 16px;
+  font-size: 16px;
+  border-radius: 4px;
+  border: 1px solid #150909;
+}
+.player-item {
+  margin-bottom: 10px;
+  background: #03070a;
+  padding: 8px;
+  border-radius: 5px;
+}
+.add-form {
+  display: flex;
+  gap: 8px;
+  margin-top: 18px;
+}
+.add-form input {
+  flex: 1;
+  padding: 8px;
+  border-radius: 4px;
+  border: 1px solid #0c0404;
+  font-size: 15px;
+}
+.add-form button {
+  padding: 8px 14px;
+  background: #1976d2;
+  color: #140101;
+  border: none;
+  border-radius: 4px;
+  font-size: 15px;
+  cursor: pointer;
+}
+.add-form button:hover {
+  background: #0d47a1;
+}

@@ -1,0 +1,154 @@
+=== EXPERIMENT-19: FRONT- BACKEND INTEGRATION ===
+
+BACKEND (Express Server):
+const express = require('express');
+const cors = require('cors');
+const app = express();
+
+app.use(cors({ origin: 'http://localhost:5173' }));
+
+app.get('/api/data', (req, res) => {
+  res.json({ message: 'Hello from the backend!' });
+});
+
+app.listen(5000, () => console.log('Server running on port 5000'));
+
+FRONTEND (React + Axios):
+import axios from 'axios';
+
+function App() {
+  const [data, setData] = useState(null);
+
+  useEffect(() => {
+    axios.get('http://localhost:5000/api/data')
+      .then((response) => setData(response.data))
+      .catch((error) => console.error('Error:', error));
+  }, []);
+
+  return <div>{data ? <p>{data.message}</p> : <p>Waiting...</p>}</div>;
+}
+
+=== EXPERIMENT-21: REAL-TIME CHAT APPLICATION ===
+
+BACKEND (Socket.IO Server):
+const express = require("express");
+const { Server } = require("socket.io");
+const http = require("http");
+
+const app = express();
+const server = http.createServer(app);
+const io = new Server(server, { cors: { origin: "*" } });
+
+io.on("connection", (socket) => {
+  console.log("User connected:", socket.id);
+
+  socket.on("send_message", (data) => {
+    io.emit("receive_message", data);
+  });
+
+  socket.on("disconnect", () => {
+    console.log("User disconnected:", socket.id);
+  });
+});
+
+FRONTEND (React + Socket.IO Client):
+import io from "socket.io-client";
+
+const socket = io("http://localhost:5000");
+
+function App() {
+  const [name, setName] = useState("");
+  const [message, setMessage] = useState("");
+  const [chat, setChat] = useState([]);
+
+  useEffect(() => {
+    socket.on("receive_message", (data) => {
+      setChat((prev) => [...prev, data]);
+    });
+  }, []);
+
+  const sendMessage = (e) => {
+    e.preventDefault();
+    const msgData = { name, message };
+    socket.emit("send_message", msgData);
+    setMessage("");
+  };
+
+COMMUNICATION PATTERNS:
+
+REST API (Experiment-19):
+- HTTP Request/Response model
+- Frontend makes GET request to backend
+- Backend responds with JSON data
+- One-time data exchange
+
+WebSocket (Experiment-21):
+- Real-time bidirectional communication
+- Persistent connection between client and server
+- Instant message broadcasting
+- Live updates without page refresh
+
+PROJECT STRUCTURE:
+
+Experiment-19/
+├── Backend/
+│   ├── server.js → Express REST API
+│   └── package.json → cors, express
+└── frontend/
+    ├── src/App.jsx → React with Axios
+    └── package.json → react, axios, vite
+
+Experiment-21/
+├── chat-backend/
+│   ├── server.js → Socket.IO server
+│   └── package.json → express, socket.io
+└── chat-frontend/
+    ├── src/App.jsx → React with Socket.IO client
+    └── package.json → react, socket.io-client
+
+HOW TO RUN:
+
+Experiment-19:
+1. Backend: cd Backend && node server.js (port 5000)
+2. Frontend: cd frontend && npm run dev (port 5173)
+3. Frontend fetches data from backend API
+
+Experiment-21:
+1. Backend: cd chat-backend && node server.js (port 5000)
+2. Frontend: cd chat-frontend && npm run dev (port 5173)
+3. Open multiple browser tabs to test real-time chat
+
+CORS CONFIGURATION:
+- Experiment-19: Specific origin (http://localhost:5173)
+- Experiment-21: Wildcard (*) for all origins
+
+IMPORTANT CONCEPTS:
+- Client-Server Architecture → Frontend communicates with backend
+- API Integration → REST endpoints for data exchange
+- Real-time Communication → WebSocket for instant messaging
+- Cross-Origin Resource Sharing → CORS for browser security
+- Event-Driven Programming → Socket events for chat functionality
+- State Management → React hooks for UI updates
+
+TECHNOLOGIES USED:
+Backend: Node.js, Express.js, Socket.IO, CORS
+Frontend: React, Vite, Axios, Socket.IO Client
+Communication: HTTP REST API, WebSocket Protocol
+
+WHAT I LEARNED:
+1. How to build complete fullstack applications
+2. Different types of client-server communication patterns
+3. REST API integration with HTTP requests
+4. Real-time communication using WebSockets
+5. CORS configuration for cross-origin requests
+6. Event handling in Socket.IO applications
+7. State management in React for live data updates
+8. Project organization for fullstack development
+Footer
+© 2025 GitHub, Inc.
+Footer navigation
+Terms
+Privacy
+Security
+Status
+Community
