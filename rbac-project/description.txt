@@ -1,0 +1,28 @@
+🛡️ Role-Based Access Control (RBAC) – MERN Stack Project
+
+This project implements a Role-Based Access Control (RBAC) system using the MERN (MongoDB, Express.js, React.js, Node.js) stack.
+It provides a secure and fine-grained permission model that controls what users can do and see based on their roles — Admin, Editor, or Viewer.
+
+The backend uses JWT authentication with encoded role claims and middleware-based authorization to protect APIs.
+On the frontend, React dynamically enables, disables, or hides UI elements depending on the logged-in user’s permissions.
+
+Admins can manage users and roles, Editors can create and modify their own content, and Viewers have read-only access.
+MongoDB queries are filtered by role and ownership, ensuring data isolation and security at the database level.
+
+This project also includes user seeding, Docker setup for quick deployment, and secure coding practices such as input validation, hashed passwords, CORS/CSRF protection, and role-based middleware testing.
+
+🔑 Key Highlights
+
+Fine-grained access control with Admin, Editor, and Viewer roles
+
+JWT-based authentication and secure authorization middleware
+
+Role & permission matrix for configurable access rules
+
+UI guarding in React to restrict buttons, menus, and routes
+
+Ownership checks ensuring Editors can only edit their own content
+
+Admin panel for managing users and roles
+
+Secure practices — password hashing, input sanitization, rate limiting
