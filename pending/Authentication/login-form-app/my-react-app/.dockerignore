@@ -1,0 +1,4 @@
+node_modules
+build
+.git
+.envdocker build -t react-login-app .

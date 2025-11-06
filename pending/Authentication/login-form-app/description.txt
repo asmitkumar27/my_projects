@@ -1,0 +1,13 @@
+ A responsive login component with form fields for username and password.
+- Styling provided in src/login.css for consistent layout, spacing, and simple error states.
+- Client-side validation for required fields and basic input checks.
+- Submission flow that posts credentials to a backend /login endpoint and handles responses.
+- Success handling: stores an authentication token (e.g., JWT) in localStorage and redirects to protected views.
+- Error handling: displays server or validation errors to the user in a concise manner.
+- Simple logging and visual feedback during network requests (loading and error states).
+
+Learning outcomes:
+- Building reusable form components and applying modular CSS.
+- Implementing client-side validation and UX-friendly error messages.
+- Integrating frontend form flows with an authentication API and managing tokens securely in the browser.
+- Understanding the basics of protecting routes on the client and coordinating with backend authentication.

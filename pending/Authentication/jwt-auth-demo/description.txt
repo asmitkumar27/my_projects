@@ -1,0 +1,25 @@
+A simple Node.js and Express.js backend demonstrating API authentication using JSON Web Tokens (JWT). 
+This project includes a login route for token generation and middleware to protect a secure route.
+
+This project is a lightweight backend server built with Node.js and Express.js that implements a secure authentication system using JSON Web Tokens (JWT).
+
+It features a POST /login endpoint that validates hardcoded user credentials and, upon success, generates a signed JWT. It also includes a GET /protected route that is secured by a custom middleware. This middleware intercepts incoming requests, validates the Bearer token from the Authorization header, and only allows authenticated users to access the protected resource.
+
+This example clearly demonstrates the core concepts of token-based authentication:
+
+Token Generation: Issuing a signed token on login.
+
+Middleware: Intercepting and verifying tokens.
+
+Route Protection: Blocking unauthorized (401) or forbidden (403) requests.
+
+## Key Features (For a Resume or Portfolio Project)
+Built a RESTful API using Node.js and Express.js to manage user authentication.
+
+Implemented JWT (JSON Web Token) for secure, stateless authentication.
+
+Developed a /login endpoint to issue signed tokens to validated users.
+
+Created custom middleware to verify Bearer tokens, successfully protecting API routes from unauthorized access.
+
+Managed API responses for successful logins (200), missing tokens (401), and invalid tokens (403).
