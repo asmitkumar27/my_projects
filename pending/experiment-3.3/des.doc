@@ -1,0 +1,34 @@
+Description:
+
+The Person Class Hierarchy project demonstrates the concept of Object-Oriented Programming (OOP), specifically inheritance, encapsulation, and polymorphism. The main idea is to create a class hierarchy that models real-world relationships among different types of people — for example, Person, Student, Teacher, and Employee.
+
+At the base of the hierarchy is the Person class, which contains common attributes such as name, age, gender, and address, along with methods like displayInfo().
+Derived classes like Student, Teacher, or Employee extend the Person class and add specific properties and behaviors — for example, Student might include rollNumber, course, and grade, while Teacher might include subject and salary.
+
+This project helps to understand how inheritance allows code reusability, logical structure, and easy maintenance in software design. It also shows how derived classes can override base class methods to provide specialized behavior.
+
+Key Features:
+
+Implementation of base and derived classes.
+
+Demonstrates inheritance, method overriding, and constructor chaining.
+
+Structured hierarchy for real-world entities.
+
+Use of access specifiers for data protection (encapsulation).
+
+Easy to extend with additional subclasses (e.g., Admin, Manager, etc.).
+
+Technologies Used:
+
+C++ / Java / Python – for object-oriented implementation.
+
+IDE such as Code::Blocks, VS Code, or Eclipse.
+
+Applications:
+
+Modeling user roles in management systems.
+
+Foundation for larger OOP-based applications.
+
+Educational demonstration of inheritance and class relationships.
