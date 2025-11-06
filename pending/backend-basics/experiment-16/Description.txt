@@ -1,0 +1,18 @@
+Experiment Summary: Implementing Middleware and Token-Based Authentication in Express.js
+Through this experiment, I learned how to implement and utilize middleware in an Express.js application to handle both request logging and Bearer token–based authentication. I gained a clear understanding of how middleware functions operate within the request–response cycle and how they can be applied globally or to specific routes.
+
+I developed a logging middleware that records key request details such as the HTTP method, request URL, and timestamp. This enhanced my understanding of how to track and monitor incoming requests for debugging and analysis purposes.
+
+Additionally, I implemented an authentication middleware that validates the Authorization header for a specific Bearer token (mysecrettoken). By applying this middleware to a protected route, I learned how to restrict access and secure API endpoints in a Node.js backend environment.
+
+Testing the setup using Postman and curl provided hands-on experience in verifying both public and protected routes, observing log outputs, and handling error responses for unauthorized access.
+
+Overall, this experiment strengthened my understanding of:
+
+Express.js middleware structure and execution flow
+
+Logging incoming HTTP requests
+
+Implementing Bearer token–based authentication
+
+Securing API routes and validating requests effectively
